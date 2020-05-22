@@ -16,7 +16,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onClick(View view) {
+    public void onClickbtnDel(View view) {
+        Button btnDel = findViewById(R.id.buttonDel);
+        final EditText editTextname = findViewById(R.id.editTextname);
+        final EditText editTextgmail = findViewById(R.id.editTextgmail);
+        final TextView tvResult = findViewById(R.id.textResult);
+        btnDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editTextgmail.setText(null);
+                editTextname.setText(null);
+                tvResult.setText(null);
+            }
+        });
+    }
+
+    public void onClickbtnOk(View view) {
         Button btnOk = findViewById(R.id.buttonOk);
         final EditText editTextname = findViewById(R.id.editTextname);
         final EditText editTextgmail = findViewById(R.id.editTextgmail);
